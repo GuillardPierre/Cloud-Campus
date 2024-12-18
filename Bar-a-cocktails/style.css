@@ -6,14 +6,21 @@ body {
 	font-size: 16px;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html,
-body {
+body,
+header {
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 }
 
 .navbar {
+	width: 100%;
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -23,6 +30,11 @@ body {
 	color: #fff;
 	padding-inline: 10px;
 	background-color: #baa377;
+}
+
+.navbar h2 {
+	cursor: pointer;
+	align-self: center;
 }
 
 .navbar-list {
@@ -43,7 +55,12 @@ body {
 	color: #baa377;
 }
 
+.burger-menu {
+	display: none;
+}
+
 .header-title {
+	width: 100%;
 	background: linear-gradient(1deg, #ffecc2 43.6%, #baa377 68.65%);
 	display: flex;
 	flex-direction: column;
@@ -62,6 +79,7 @@ h1 {
 }
 
 .header-section {
+	width: 100%;
 	background: linear-gradient(
 		179deg,
 		#ffecc2 4.83%,
@@ -71,13 +89,16 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .header-section-item {
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	min-width: 320px;
 }
 
 .header-section-item h2 {
@@ -88,9 +109,11 @@ h1 {
 
 .header-section-item img {
 	translate: 0 -60px;
+	width: 100%;
 }
 
 .main-section {
+	width: 100%;
 	font-family: 'Bree Serif';
 	font-size: 16px;
 	font-style: normal;
@@ -98,23 +121,30 @@ h1 {
 	line-height: normal;
 	color: #fff;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	gap: 72px;
-	padding: 42px 34px;
+	gap: 30px;
+	padding: 42px 20px;
+	flex-wrap: wrap;
+}
+
+.main-section img {
+	width: 45%;
+	padding: 0;
+	/* max-width: 360px; */
 }
 
 .main-section-article {
-	width: 663px;
-	height: 249px;
-	padding: 25px 11px 43px 11px;
+	width: 45%;
+	height: 283px;
+	padding: 25px 0px 43px 0px;
 	background-color: #baa377;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	gap: 15px;
+	gap: 12px;
 }
 
 .withButton {
@@ -123,6 +153,10 @@ h1 {
 
 .main-section-article h3 {
 	align-self: center;
+}
+
+.main-section-article p {
+	margin-left: 11px;
 }
 
 .main-section-article-list {
@@ -142,6 +176,7 @@ h1 {
 	border: none;
 	border-radius: 15px;
 	cursor: pointer;
+	margin-left: 11px;
 }
 
 .footer-section {
@@ -150,10 +185,12 @@ h1 {
 	justify-content: space-between;
 	padding: 20px 34px;
 	color: #fff;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .footer-section-item {
-	width: 50%;
+	width: 48%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -166,6 +203,10 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	gap: 46px;
+}
+
+#les-cocktails > article > ul > li {
+	margin-left: 11px;
 }
 
 .footer-section-item button {
