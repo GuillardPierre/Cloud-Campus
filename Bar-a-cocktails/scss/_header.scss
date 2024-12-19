@@ -1,0 +1,151 @@
+@use 'variables';
+
+.navbar {
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	padding-block: 20px;
+	display: flex;
+	justify-content: space-between;
+	color: variables.$color-secondary;
+	padding-inline: 10px;
+	background-color: variables.$color-primary;
+
+	h2 {
+		cursor: pointer;
+		align-self: center;
+	}
+
+	.navbar-list {
+		display: flex;
+		list-style: none;
+		align-items: center;
+
+		.navbar-list-item {
+			margin-right: 20px;
+			cursor: pointer;
+		}
+
+		.action {
+			background-color: variables.$color-secondary;
+			padding: 5px 10px;
+			border-radius: 15px;
+			color: variables.$color-primary;
+		}
+	}
+
+	.burger-menu {
+		display: none;
+	}
+}
+
+.header-title {
+	width: 100%;
+	background: linear-gradient(
+		1deg,
+		#ffecc2 43.6%,
+		variables.$color-primary 68.65%
+	);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		color: variables.$color-secondary;
+		text-align: center;
+		font-size: 96px;
+	}
+
+	img {
+		translate: 0 -120px;
+	}
+}
+
+.header-section {
+	width: 100%;
+	background: linear-gradient(
+		179deg,
+		#ffecc2 4.83%,
+		variables.$color-primary 16.78%,
+		#ddc79d 98.92%
+	);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.header-section-item {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-width: 320px;
+
+		h2 {
+			color: variables.$color-secondary;
+			text-align: center;
+			font-size: 96px;
+		}
+
+		img {
+			translate: 0 -60px;
+			width: 100%;
+		}
+	}
+}
+
+// @media (width < 768px) {
+// 	.navbar-list {
+// 		display: none !important;
+// 		padding-block: 10px;
+// 	}
+
+// 	.burger-menu {
+// 		display: block !important;
+// 		width: 59.878px;
+// 		height: 46.572px;
+// 		flex-shrink: 0;
+// 		cursor: pointer;
+// 	}
+
+// 	.header-section-item {
+// 		width: 100%;
+// 	}
+
+// 	h1,
+// 	.header-section-item h2 {
+// 		font-size: 60px;
+// 	}
+
+// 	.header-title img {
+// 		translate: 20px -100px;
+// 		max-width: 80%;
+// 		max-height: 500px;
+// 	}
+
+// 	.header-section-item img {
+// 		translate: 0 -40px;
+// 		max-width: 80%;
+// 		max-height: 500px;
+// 	}
+
+// 	.main-section {
+// 		width: 100%;
+// 	}
+
+// 	.main-section img {
+// 		width: 100%;
+// 	}
+
+// 	.main-section-article {
+// 		width: 100%;
+// 		height: fit-content;
+// 	}
+
+// 	.footer-section-item {
+// 		width: 100%;
+// 	}
+// }

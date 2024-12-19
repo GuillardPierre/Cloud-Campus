@@ -1,11 +1,13 @@
+@use 'variables';
+
 @media screen and (max-width: 768px) {
 	.navbar-list {
-		display: none;
+		display: none !important;
 		padding-block: 10px;
 	}
 
 	.burger-menu {
-		display: block;
+		display: block !important;
 		width: 59.878px;
 		height: 46.572px;
 		flex-shrink: 0;
@@ -31,6 +33,10 @@
 		translate: 0 -40px;
 		max-width: 80%;
 		max-height: 500px;
+	}
+
+	.main-section {
+		width: 100%;
 	}
 
 	.main-section img {

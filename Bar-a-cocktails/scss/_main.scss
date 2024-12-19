@@ -1,0 +1,94 @@
+@use 'variables';
+
+body {
+	font-family: variables.$font-family;
+	font-style: normal;
+	font-weight: variables.$font-weight;
+	line-height: variables.$line-height;
+	font-size: variables.$font-size;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: variables.$font-family;
+}
+
+html,
+body,
+header {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+.main-section {
+	width: 100%;
+	font-family: variables.$font-family;
+	font-size: variables.$font-size;
+	font-style: normal;
+	font-weight: variables.$font-weight;
+	line-height: variables.$line-height;
+	color: variables.$color-secondary;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 30px;
+	padding: 42px 20px;
+	flex-wrap: wrap;
+}
+
+.main-section img {
+	width: 45%;
+	padding: 0;
+	/* max-width: 360px; */
+}
+
+.main-section-article {
+	width: 45%;
+	height: 283px;
+	padding: 25px 0px 43px 0px;
+	background-color: variables.$color-primary;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 12px;
+}
+
+.withButton {
+	justify-content: space-between;
+}
+
+.main-section-article h3 {
+	align-self: center;
+}
+
+.main-section-article p {
+	margin-left: 11px;
+}
+
+.main-section-article-list {
+	justify-self: center;
+	list-style: inside;
+	margin-top: 20px;
+}
+
+.main-section-article-list li {
+	margin-left: 11px;
+}
+
+.main-section-article button {
+	background-color: variables.$color-secondary;
+	color: variables.$color-primary;
+	display: flex;
+	width: 160px;
+	height: 38px;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	margin-left: 11px;
+}

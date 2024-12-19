@@ -1,0 +1,49 @@
+@use 'variables';
+
+.footer-section {
+	background-color: variables.$color-primary;
+	display: flex;
+	justify-content: center;
+	padding: 20px 34px;
+	color: variables.$color-secondary;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	.footer-section-item {
+		width: 48%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 46px;
+
+		.footer-section-item-list {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			gap: 46px;
+		}
+
+		button {
+			background-color: variables.$color-secondary;
+			color: variables.$color-primary;
+			display: flex;
+			width: 98%;
+			height: 38px;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+	}
+}
+
+.footer-section-last {
+	background-color: variables.$color-secondary;
+	display: flex;
+	padding: 20px 40px;
+	align-items: center;
+	align-self: stretch;
+	color: variables.$color-primary;
+}
