@@ -1,0 +1,71 @@
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.formSection form {
+    width: 25%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    border: 3px solid lightsalmon;
+    border-radius: 8px;
+    padding: 20px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.95px 2.95px 3.6px;
+}
+
+.formSection form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    height: 18px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid lightcoral;
+}
+
+textarea, select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid lightcoral;
+}
+
+.submitBtn {
+    align-self: center;
+}
+
+.error {
+    border: 2px solid red;
+    color: red;
+    border-radius: 4px;
+}
+
+.valid {
+    border: 2px solid green;
+    color: green;
+    border-radius: 4px;
+}
+
+.errorMessage {
+    color: red;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.finalMessage {
+    align-self: center;
+    padding: 10px 5px;
+}

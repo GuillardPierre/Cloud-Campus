@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+    <section class="input">
+        <input type="text" id="text1">
+        <input type="text" id="text2">
+    </section>
+    <section>
+        <h1>Tableau de calcul</h1>
+        <label for="numberInput">Saisissez un nombre : </label>
+        <input type="number" id="numberInput" value="0" />
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>nombre</th>
+                    <th>carré</th>
+                    <th>cube</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="numberCell">0</td>
+                    <td id="squareCell">0</td>
+                    <td id="cubeCell">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Déplacement carré</h2>
+        <div class="container">
+            <div class="square" id="cell1"></div>
+            <div class="square" id="cell2"></div>
+            <div class="square" id="cell3"></div>
+            <div class="square" id="cell4"></div>
+        </div>
+        <br>
+        <button id="moveButton">Bouge</button>
+    </section>
+    <section>
+        <h2>Galerie</h2>
+        <div class="container2">
+        <figure>
+            <img src="img/1.webp" id="mainImg" alt="montagne 1">
+            <figcaption id="figcaption">Hello</figcaption>
+        </figure>
+        <section class="sideSection">
+            <img src="img/1.webp" class="sideImg" alt="montagne 1">
+            <img src="img/2.webp" class="sideImg" alt="montagne 2">
+            <img src="img/3.webp" class="sideImg" alt="montagne 3">
+            <img src="img/4.webp" class="sideImg" alt="montagne 4">
+            <img src="img/5.webp" class="sideImg" alt="montagne 5">
+            <img src="img/6.webp" class="sideImg" alt="montagne 6">
+        </section>
+    </div>
+    </section>
+</body>
+</html>
