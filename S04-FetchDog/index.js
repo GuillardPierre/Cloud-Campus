@@ -3,7 +3,6 @@ const imgZone = document.querySelector('#img-dog');
 const btn = document.querySelector('#btn');
 const selector = document.querySelector('#selector');
 const favZone = document.querySelector('#fav-zone');
-let value = '';
 
 fetch('https://dog.ceo/api/breeds/list/all')
   .then((response) => response.json())
@@ -13,8 +12,12 @@ fetch('https://dog.ceo/api/breeds/list/all')
       ([breed, subBreeds]) =>
         subBreeds.length ? subBreeds.map((sub) => `${breed} ${sub}`) : breed
     );
-    breedsArray.forEach((race) => {
-      createElement('option', race, false, selector);
+
+    const optionsHTML = breedsArray.forEach((race) => {
+      const option = `<option value="${race
+        .split(' ')
+        .join('/')}">${race}</option>`;
+      selector.innerHTML += option;
     });
   });
 
@@ -22,37 +25,24 @@ const newDog = () => {
   if (selector.value) {
     url = `https://dog.ceo/api/breed/${selector.value}/images/random`;
   }
-  const rep = fetch(url)
+
+  fetch(url)
     .then((response) => response.json())
     .then((response) => {
-      createElement('img', false, response.message, imgZone);
+      imgZone.innerHTML = `<img src="${response.message}" class="dogImg">`;
       const actualImg = document.querySelector('.dogImg');
       actualImg.addEventListener('click', addToFavorite);
     });
 };
 
 const addToFavorite = (e) => {
-  createElement('img', false, e.target.src, favZone, true);
+  favZone.innerHTML += `<img src="${e.target.src}" class="favDogImg">`;
+  const allFav = document.querySelectorAll('.favDogImg');
+  allFav.forEach((fav) => fav.addEventListener('click', removeFav));
 };
 
-const createElement = (type, name, src, target, imgFav) => {
-  if (type === 'option') {
-    const option = document.createElement('option');
-    option.value = name.split(' ').join('/');
-    option.textContent = name;
-    target.appendChild(option);
-  } else if (type === 'img') {
-    const img = document.createElement('img');
-    img.className = imgFav ? 'favDogImg' : 'dogImg';
-    img.src = src;
-    if (!imgFav) {
-      const existingImg = document.querySelector('.dogImg');
-      if (existingImg) {
-        target.removeChild(existingImg);
-      }
-    }
-    target.appendChild(img);
-  }
+const removeFav = (e) => {
+  e.target.remove();
 };
 
 btn.addEventListener('click', newDog);
