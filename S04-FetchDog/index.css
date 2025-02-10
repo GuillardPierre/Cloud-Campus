@@ -1,0 +1,44 @@
+#main {
+  width: 50%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-dog {
+  width: 700px;
+  height: 400px;
+  background-color: lightblue;
+}
+
+.dogImg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.dogImg:hover {
+  border: 5px solid lightcoral;
+  border-radius: 4px;
+}
+
+#fav-zone {
+  border: 5px solid lightcoral;
+  border-radius: 4px;
+  min-width: 420px;
+  min-height: 200px;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.favDogImg {
+  width: 100px;
+  object-fit: cover;
+}
