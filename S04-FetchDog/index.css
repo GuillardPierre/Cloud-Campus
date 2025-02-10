@@ -36,9 +36,29 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  justify-content: center;
 }
 
 .favDogImg {
   width: 100px;
+  height: 100px;
   object-fit: cover;
+}
+
+#selector,
+#btn {
+  border: 5px solid lightblue;
+  border-radius: 4px;
+}
+
+#btn,
+select {
+  background-color: lightblue;
+  color: lightcoral;
+}
+
+#btn:hover {
+  background-color: lightcoral;
+  color: lightblue;
+  border: 5px solid lightcoral;
 }
