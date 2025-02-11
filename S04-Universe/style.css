@@ -149,3 +149,9 @@ section {
   background-color: whitesmoke;
   border-radius: 12px;
 }
+
+.data_right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
