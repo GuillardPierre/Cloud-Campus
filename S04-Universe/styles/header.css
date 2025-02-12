@@ -19,7 +19,7 @@ body {
   background-color: #000000;
   color: whitesmoke;
   font-family: 'Space Grotesk', serif;
-  height: 100vh;
+  height: calc(99vh);
 }
 
 header {
@@ -66,7 +66,6 @@ button:hover {
 .side_bar {
   flex: 1;
   width: 100px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   border: 3px solid whitesmoke;
@@ -101,5 +100,9 @@ button:hover {
 main {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: calc(100%-40px);
+}
+
+.main {
+  height: calc(100%-40px);
 }

@@ -25,6 +25,7 @@ section {
 }
 
 .table {
+  align-self: center;
   padding: 10px 1px;
   position: relative;
   overflow: hidden;
