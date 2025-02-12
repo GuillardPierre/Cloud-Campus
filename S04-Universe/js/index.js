@@ -6,7 +6,7 @@ const spaceshipDisplayZone = document.querySelector('.spaceship');
 const fetchData = async (url) => {
   const rep = await fetch(url);
   const json = await rep.json();
-  return json.results;
+  return json;
 };
 
 const displayDatas = (data, zone) => {
@@ -17,9 +17,9 @@ const init = async () => {
   const people = await fetchData(`${baseUrl}people/`);
   const planets = await fetchData(`${baseUrl}planets/`);
   const spaceship = await fetchData(`${baseUrl}vehicles/`);
-  displayDatas(people.length, peopleDisplayZone);
-  displayDatas(planets.length, planetDisplayZone);
-  displayDatas(spaceship.length, spaceshipDisplayZone);
+  displayDatas(people.count, peopleDisplayZone);
+  displayDatas(planets.count, planetDisplayZone);
+  displayDatas(spaceship.count, spaceshipDisplayZone);
 };
 
 document.addEventListener('DOMContentLoaded', init);

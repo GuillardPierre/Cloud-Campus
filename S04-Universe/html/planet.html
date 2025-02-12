@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/planet.css" />
+    <script src="../js/planet.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <img class="logo" src="../images/spaceX.svg"
+      /></a>
+      <nav>
+        <ul class="main_list">
+          <a href="../index.html">
+            <li>Accueil</li>
+          </a>
+          <li>Prochaine Mission</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <nav class="side_bar">
+        <ul>
+          <li class="side_bar_element">
+            <img src="../images/planet.svg" alt="planet" />Planètes
+          </li>
+          <li class="side_bar_element">
+            <img src="../images/spaceship.svg" alt="spaceship" />Véhicules
+          </li>
+          <li class="side_bar_element">
+            <img src="../images/jedi.svg" alt="jedi" />Personnes
+          </li>
+        </ul>
+      </nav>
+      <div class="main">
+        <section>
+          <h2>Planètes</h2>
+          <select class="selector">
+            <option value="">Choisissez un filtre</option>
+          </select>
+          <div class="textarea"><input /></div>
+          <div class="table">
+            <img src="../images/img1.jpg" alt="background" />
+            <table>
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Terrain</th>
+                </tr>
+              </thead>
+              <tbody class="tbody"></tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h2 class="planet_title">Sélectionner le contenu à afficher</h2>
+          <div class="infos"></div>
+          <div>
+            <h3 class="people_title hidden" style="padding-left: 12px">
+              Personnages importants :
+            </h3>
+            <div class="people_infos"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

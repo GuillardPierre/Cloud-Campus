@@ -1,0 +1,85 @@
+h3 {
+  font-size: 1.4rem;
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 30px;
+  width: 100%;
+}
+
+section {
+  width: 50%;
+  border: 3px solid whitesmoke;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.table {
+  padding: 10px 1px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid whitesmoke;
+  border-radius: 12px;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.table img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+table {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+thead {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+tbody {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+tbody tr th {
+  padding: 10px 2px;
+}
+
+tbody tr:hover {
+  background-color: whitesmoke;
+  color: black;
+  cursor: pointer;
+}
+
+.infos,
+.people_infos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}

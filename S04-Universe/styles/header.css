@@ -19,6 +19,7 @@ body {
   background-color: #000000;
   color: whitesmoke;
   font-family: 'Space Grotesk', serif;
+  height: 100vh;
 }
 
 header {
@@ -62,13 +63,10 @@ button:hover {
   border-radius: 12px;
 }
 
-main {
-  display: flex;
-}
-
 .side_bar {
+  flex: 1;
   width: 100px;
-  height: calc(100vh - 85px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   border: 3px solid whitesmoke;
@@ -100,58 +98,8 @@ main {
   border-radius: 90px;
 }
 
-.main {
-  width: 100%;
-  height: calc(100vh - 85px);
-  padding: 30px;
+main {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-section {
-  position: relative;
-  min-height: 30%;
-  height: fit-content;
-  padding: 30px 15px;
-  border: 3px solid whitesmoke;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  overflow: hidden;
-  gap: 30px;
-}
-
-.section_img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -10;
-}
-
-.datas {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-}
-
-.data {
-  color: #000000;
-  display: flex;
-  padding: 10px;
-  background-color: whitesmoke;
-  border-radius: 12px;
-}
-
-.data_right {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 }

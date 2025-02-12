@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -14,6 +15,7 @@
       <nav>
         <ul class="main_list">
           <li>Accueil</li>
+
           <li>Prochaine Mission</li>
         </ul>
       </nav>
@@ -21,20 +23,22 @@
     <main>
       <nav class="side_bar">
         <ul>
+          <a href="./html/planet.html">
+            <li class="side_bar_element">
+              <img src="./images/planet.svg" alt="planet" />Planètes
+            </li>
+          </a>
           <li class="side_bar_element">
-            <img src="images/planet.svg" alt="planet" />Planètes
+            <img src="./images/spaceship.svg" alt="spaceship" />Véhicules
           </li>
           <li class="side_bar_element">
-            <img src="images/spaceship.svg" alt="spaceship" />Véhicules
-          </li>
-          <li class="side_bar_element">
-            <img src="images/jedi.svg" alt="jedi" />Personnes
+            <img src="./images/jedi.svg" alt="jedi" />Personnes
           </li>
         </ul>
       </nav>
       <div class="main">
         <section class="universe">
-          <img class="section_img" src="images/img2.jpg" />
+          <img class="section_img" src="./images/img2.jpg" />
           <h2>About the universe</h2>
           <p>
             Bienvenue sur <span>About the universe</span> pour découvrir toutes
@@ -43,7 +47,7 @@
           <button>DÉCOUVRIR</button>
         </section>
         <section class="numbers">
-          <img class="section_img" src="images/img1.jpg" />
+          <img class="section_img" src="./images/img1.jpg" />
           <h2>Les chiffres</h2>
           <p>
             Nous nous efforçons à archiver toutes nos trouvailles pour vous les
@@ -51,28 +55,28 @@
           </p>
           <div class="datas">
             <article class="data">
-              <img src="images/people.svg" alt="people" />
+              <img src="./images/people.svg" alt="people" />
               <div class="data_right">
                 <h3>Nombre de personnes recencées</h3>
                 <p class="data_info people">Récupération des données...</p>
               </div>
             </article>
             <article class="data">
-              <img src="images/spaceship2.svg" alt="spaceship" />
+              <img src="./images/spaceship2.svg" alt="spaceship" />
               <div class="data_right">
                 <h3>Nombre de véhicules recencés</h3>
                 <p class="data_info spaceship">Récupération des données...</p>
               </div>
             </article>
             <article class="data">
-              <img src="images/planet.svg" alt="planet" />
+              <img src="./images/planet.svg" alt="planet" />
               <div class="data_right">
                 <h3>Nombre de planètes recencées</h3>
                 <p class="data_info planet">Récupération des données...</p>
               </div>
             </article>
             <article class="data">
-              <img src="images/clock.svg" alt="clock" />
+              <img src="./images/clock.svg" alt="clock" />
               <div class="data_right">
                 <h3>Prochaine mission</h3>
                 <p class="data_info mission">10 juin 2025</p>
