@@ -19,7 +19,7 @@ body {
   background-color: #000000;
   color: whitesmoke;
   font-family: 'Space Grotesk', serif;
-  height: calc(99vh);
+  max-height: 100vh;
 }
 
 header {
@@ -103,7 +103,7 @@ button:hover {
 main {
   display: flex;
   width: 100%;
-  height: calc(100%-40px);
+  height: 85vh;
 }
 
 .main {
