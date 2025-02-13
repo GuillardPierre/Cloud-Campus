@@ -1,3 +1,12 @@
+const numbersPlanetDisplayZone = document.querySelector('.planets_numbers');
+const tbodyZone = document.querySelector('.tbody');
+const planetTitle = document.querySelector('.planet_title');
+const planetInfos = document.querySelector('.infos');
+const peopleInfos = document.querySelector('.people_infos');
+const peopleInfosTitle = document.querySelector('.people_title');
+const selector = document.querySelector('.selector');
+const input = document.querySelector('.input');
+
 const createTableLine = (zone, data) => {
   zone.innerHTML += `
       <tr class="planetLine">
@@ -17,8 +26,6 @@ const createDataElement = (icon, label, value) => {
 };
 
 const displayPlanetInfo = (data) => {
-  console.log(data);
-
   const planetData = [
     { icon: '../images/climate.svg', label: 'Climat', value: data.climate },
     {
@@ -73,4 +80,8 @@ const displayResident = (data, noData) => {
   peopleInfos.innerHTML += `
       <p>${data.name}</p>
     `;
+};
+
+const displayPlanetsNumber = (zone, number) => {
+  zone.innerHTML = `<p>Nombre de planètes : <span>${number}</span>  </p>`;
 };

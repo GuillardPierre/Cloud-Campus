@@ -1,9 +1,4 @@
 const baseUrl = 'https://swapi.dev/api/';
-const tbodyZone = document.querySelector('.tbody');
-const planetTitle = document.querySelector('.planet_title');
-const planetInfos = document.querySelector('.infos');
-const peopleInfos = document.querySelector('.people_infos');
-const peopleInfosTitle = document.querySelector('.people_title');
 
 let allPlanets = [];
 
@@ -27,7 +22,15 @@ const getPlanetInfo = async (e) => {
   }
 };
 
-const init = async (url) => {
+const addTableEventListener = () => {
+  const allLines = document.querySelectorAll('.planetLine');
+  allLines.forEach((line) => {
+    line.removeEventListener('click', getPlanetInfo);
+    line.addEventListener('click', getPlanetInfo);
+  });
+};
+
+const getPlanets = async (url) => {
   let nextUrl = url;
   while (nextUrl) {
     const planets = await fetchData(nextUrl);
@@ -36,9 +39,14 @@ const init = async (url) => {
       createTableLine(tbodyZone, planet);
     });
     nextUrl = planets.next;
+    displayPlanetsNumber(numbersPlanetDisplayZone, allPlanets.length);
+    addTableEventListener();
   }
-  const allLines = document.querySelectorAll('.planetLine');
-  allLines.forEach((line) => line.addEventListener('click', getPlanetInfo));
 };
 
-document.addEventListener('DOMContentLoaded', () => init(`${baseUrl}planets/`));
+const init = () => {
+  getPlanets(`${baseUrl}planets/`);
+  handleFilters();
+};
+
+document.addEventListener('DOMContentLoaded', () => init());

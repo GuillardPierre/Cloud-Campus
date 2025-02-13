@@ -32,7 +32,9 @@ header {
   border: 3px solid whitesmoke;
 }
 
-button {
+button,
+select,
+input {
   color: whitesmoke;
   border: 3px solid whitesmoke;
   background-color: #000000;

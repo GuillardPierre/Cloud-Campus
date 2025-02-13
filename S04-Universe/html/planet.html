@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/planet.css" />
     <script src="../js/api.js" defer></script>
     <script src="../js/dom.js" defer></script>
+    <script src="../js/filters.js" defer></script>
     <script src="../js/planet.js" defer></script>
   </head>
   <body>
@@ -44,8 +45,13 @@
           <h2>Planètes</h2>
           <select class="selector">
             <option value="">Choisissez un filtre</option>
+            <option value="100000">De 0 à 100.000</option>
+            <option value="100000000">De 100.000 à 100.000.000</option>
+            <option value="infinite">+ de 100.000.000</option>
           </select>
-          <div class="textarea"><input /></div>
+          <div class="input">
+            <input placeholder="Nom de la planète" />
+          </div>
           <div class="table_container">
             <img src="../images/img1.jpg" alt="background" />
             <div class="table">
@@ -60,6 +66,7 @@
               </table>
             </div>
           </div>
+          <p class="planets_numbers"></p>
         </section>
         <section>
           <h2 class="planet_title">Sélectionner le contenu à afficher</h2>
