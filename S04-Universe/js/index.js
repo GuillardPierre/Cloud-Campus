@@ -3,12 +3,6 @@ const peopleDisplayZone = document.querySelector('.people');
 const planetDisplayZone = document.querySelector('.planet');
 const spaceshipDisplayZone = document.querySelector('.spaceship');
 
-const fetchData = async (url) => {
-  const rep = await fetch(url);
-  const json = await rep.json();
-  return json;
-};
-
 const displayDatas = (data, zone) => {
   zone.innerText = data;
 };

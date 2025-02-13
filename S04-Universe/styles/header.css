@@ -89,7 +89,8 @@ button:hover {
 }
 
 .side_bar_element img,
-.data img {
+.data img,
+.data-type img {
   width: 40px;
   height: 40px;
   padding: 5px;
