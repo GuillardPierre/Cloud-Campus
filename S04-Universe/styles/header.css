@@ -107,5 +107,5 @@ main {
 }
 
 .main {
-  height: calc(100%-40px);
+  flex-wrap: wrap;
 }

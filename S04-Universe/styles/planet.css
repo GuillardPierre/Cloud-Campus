@@ -13,7 +13,8 @@ h3 {
 }
 
 section {
-  width: 50%;
+  min-width: 20%;
+  /* width: 48%; */
   border: 3px solid whitesmoke;
   border-radius: 12px;
   padding: 20px;
